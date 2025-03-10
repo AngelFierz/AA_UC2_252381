@@ -23,5 +23,5 @@ public class Seleccion {
             arreglo[i] = temporal;
         }
     }
-    }
+ } // Sii yo hice esto de forma profesionals
     
