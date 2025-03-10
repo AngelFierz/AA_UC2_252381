@@ -11,10 +11,6 @@ package mx.itson.algoritmos.ordenamiento;
 
 public class Ordenamientos {
 
-    /**
-     * Ordena un arreglo de enteros, Esto de forma ascendente por el metodo de burbuja ouyeah
-     * @param arreglo el arreglo a ordenar
-     */
     public static void ordenarBurbuja(int[] arreglo) {
         // Realiza múltiples pasadas por el arreglo
         
