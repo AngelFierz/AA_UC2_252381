@@ -9,7 +9,19 @@ package mx.itson.algoritmos.ordenamiento;
  * @author Propietario
  */
 public class Seleccion {
-    
-
+    public static void ordenarSeleccion(int[] arreglo) {
+        for (int i = 0; i < arreglo.length - 1; i++){
+            int minimo = i;
+            
+            for (int j = i + 1; j < arreglo.length; j++) {
+                if (arreglo[j] < arreglo[minimo]) {
+                    minimo = j;
+                }
+            }
+            int temporal = arreglo[minimo];
+            arreglo[minimo] = arreglo[i];
+            arreglo[i] = temporal;
+        }
+    }
     }
     
