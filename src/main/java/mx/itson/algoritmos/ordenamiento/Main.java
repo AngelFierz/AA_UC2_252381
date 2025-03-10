@@ -15,7 +15,8 @@ public class Main { // Declaración de independencia de la clase mamaimaiamin
         
         int[] numeros = {7, 10, 24, 9, 3, 14, 6, 4, 2}; // Arreglos, son 9
         
-        Ordenamientos.ordenarBurbuja(numeros); // de ordenamientos. ordenarburbuja a numeros
+        //Ordenamientos.ordenarBurbuja(numeros); // de ordenamientos. ordenarburbuja a numeros
+        Ordenamientos.ordenarSeleccion(numeros); // de ordenamientos. ordenarburbuja a numeros
         
         for (int numero : numeros) { 
             System.out.print(numero + ", "); // Imprime la lista de arriba pero con una coma.
