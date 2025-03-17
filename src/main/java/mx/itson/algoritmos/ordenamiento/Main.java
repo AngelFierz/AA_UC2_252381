@@ -13,7 +13,7 @@ public class Main { // Declaración de independencia de la clase mamaimaiamin
     
     public static void main(String[] args) { // Metodo principal, creo que era entry point
         
-        int[] numeros = {5, 10, 24, 9, 3, 14, 6, 4, 2}; // Arreglos, son 9
+        int[] numeros = {10, 4, 24, 3, 8, 12}; // Arreglos, son 6
         
         //Ordenamientos.ordenarBurbuja(numeros); // de ordenamientos. ordenarburbuja a numeros
         Ordenamientos.ordenarInsercion(numeros); // de ordenamientos. ordenarseleccion a numeros
