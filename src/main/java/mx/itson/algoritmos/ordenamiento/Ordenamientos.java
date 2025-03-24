@@ -11,7 +11,8 @@ package mx.itson.algoritmos.ordenamiento;
 
 public class Ordenamientos { // Declaración de la clase Ordenamientos
 
-   /* public static void ordenarSeleccion(int[] arreglo) { 
+    /* 
+    public static void ordenarSeleccion(int[] arreglo) { 
         for (int i = 0; i < arreglo.length - 1; i++) { 
             int minimo = i; 
             
@@ -26,37 +27,46 @@ public class Ordenamientos { // Declaración de la clase Ordenamientos
         }
     }*/
 
+    /*
     public static void ordenarInsercion(int[] arreglo) {
         for (int i = 1; i < arreglo.length; i++) { 
             int key = arreglo[i]; 
             int j = i - 1; 
-
             
             while (j >= 0 && arreglo[j] > key) { 
                 arreglo[j + 1] = arreglo[j]; 
                 j--; 
             }
-            arreglo[j + 1] =key; 
-        }
-    }
-
-    /*
-    public static void ordenarBurbuja(int[] arreglo) {
-        // Realiza múltiples pasadas por el arreglo
-        
-        for (int pasada = 1; pasada < arreglo.length; pasada++) {
-            
-            // Compara y ordena elementos adyacentes
-            for (int indice = 0; indice < arreglo.length - pasada; indice++) {
-                if (arreglo[indice] > arreglo[indice + 1]) {
-                    
-                    // Intercambia los elementos si están en el orden incorrecto
-                    int temporal = arreglo[indice];
-                    arreglo[indice] = arreglo[indice + 1];
-                    arreglo[indice + 1] = temporal;
-                }
-            }
+            arreglo[j + 1] = key; 
         }
     }
     */
+
+    public static void quickSort(int[] arreglo, int inicio, int fin) { 
+        if (inicio < fin) { 
+            int pivote = particion(arreglo, inicio, fin); 
+            quickSort(arreglo, inicio, pivote - 1); 
+            quickSort(arreglo, pivote + 1, fin); // q cool
+        }
+    }
+
+    private static int particion(int[] arreglo, int inicio, int fin) { 
+        int pivote = arreglo[fin]; 
+        int i = inicio - 1; 
+
+        for (int j = inicio; j < fin; j++) { 
+            if (arreglo[j] < pivote) { 
+                i++; 
+                int temp = arreglo[i]; 
+                arreglo[i] = arreglo[j]; 
+                arreglo[j] = temp; 
+            }
+        }
+
+        int temp = arreglo[i + 1]; 
+        arreglo[i + 1] = arreglo[fin]; 
+        arreglo[fin] = temp; 
+
+        return i + 1; 
+    }
 }

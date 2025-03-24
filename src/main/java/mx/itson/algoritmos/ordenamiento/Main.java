@@ -9,19 +9,17 @@ package mx.itson.algoritmos.ordenamiento;
  * @author Propietario
  */
 
-public class Main { // Declaración de independencia de la clase mamaimaiamin
+public class Main { // Declaración de la clase Main
     
-    public static void main(String[] args) { // Metodo principal, creo que era entry point
+    public static void main(String[] args) { // Método principal, punto de entrada
         
-        int[] numeros = {10, 4, 24, 3, 8, 12}; // Arreglos, son 6
+        int[] numeros = {8, 4, 7, 3, 9, 2, 5}; // Arreglo de números a ordenar
         
-        //Ordenamientos.ordenarBurbuja(numeros); // de ordenamientos. ordenarburbuja a numeros
-        Ordenamientos.ordenarInsercion(numeros); // de ordenamientos. ordenarseleccion a numeros
+        Ordenamientos.quickSort(numeros, 0, numeros.length - 1); // Llamada a quickSort con inicio y finnnnnnnnnnnnnnnnnnnnnnnn
         
         for (int numero : numeros) { 
-            System.out.print(numero + ", "); // Imprime la lista de arriba pero con una coma.
+            System.out.print(numero + ", "); // Imprime el arreglo ordenado con comas.
         }
-        
     }
 }
 
